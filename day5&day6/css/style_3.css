@@ -1,0 +1,26 @@
+body{
+    padding:0; 
+    margin: 0;
+    margin-top: -19px;
+}
+.header{
+    background-color:#858585 ;
+    height: 100px;
+    width: auto;
+   
+
+}
+.header>h1{
+   display: inline-block;
+  padding-top: 13px;
+   margin-bottom: 0;
+}
+.main {
+    display: grid;
+    grid-template-columns: 200px 1800px;;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+}
+.title{
+    background-color: #d6d6d6;
+    margin: 1px;
+}
