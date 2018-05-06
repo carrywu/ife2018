@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+       max-width: 960px;
+       margin: 0 auto;
+    }
+    .header{
+        background-color: #333333;
+        height: 100px;
+    }
+    .header .logo{
+        font-size: 25px;
+        color: #FFFFFF;
+        line-height: 80px;  
+    }
+    .header a{
+        color: #FFFFFF;
+        float: right;
+        margin: 0 2px;
+    }
+    .banner .container .side{
+        position: absolute;
+        right: 20%;
+        bottom: 0;
+        list-style-type: none;   
+          
+    }
+    .banner{
+        height: 250px;
+        background-color: #66BB33;
+        position: relative;
+    }
+    .banner .container ul li>a{
+        color: #070707;
+        text-decoration: none;
+    }
+    .banner .container ul>li{
+        float: left;
+        margin: 0 2px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #34562b;
+        background-color: rgba(178,221,153, .8);
+    }
+    <--!
+     .banner .container ul>li.active{
+        height: 30px;
+       line-height: 40px;       
+    }
+     -->
+    .nav{
+        height: 51px;
+        border-bottom: 1px solid #DDD;
+
+        
+    }
+    .menu{
+        margin-left: -40px;
+    }
+    
+    .menu li{
+        list-style-type: none;
+        float: left;
+        width: 100px;
+        height: 50px;
+        border: 1px solid #DDD;
+        text-align: center;
+        font-size: 15px;
+        line-height: 65px;
+        border-radius: 15px 15px 0 0;
+        background-color: #EEEEEE;
+        
+    }
+    .menu .on{
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .content{
+        margin-top: 10px;
+    }
+    .row1,.row2,.row3{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+   
+    }
+    .row1 div,
+    .row2 div,
+    .row3 div{
+        box-sizing: border-box;
+        border: 1px solid #DDD;
+        padding: 70px;
+        margin: 0 5px;
+    }
+    .row1 div,
+    .row3 div{
+        width: 33%;
+    }
+    .row2 div{
+        width: 24%;
+    }
+    .footer{
+        height: 200px;
+        background-color: #666666;
+        text-align: center
+        
+        
+    }
+    .footer h3{
+       padding-top: 20px;
+        color: #FFFFFF;
+    }
+
+  
+           
+    </style>
+</head>
+<body>
+    <div class="header">
+            <div class="container">
+               <span class="logo">Logo</span>
+                <a href="#">Github</a>
+                <a href="#">Register</a>
+                <a href="#">Login</a>
+            </div>
+    </div>
+    <div class="banner">
+        <div class="container">
+            <ul class="side">
+                <li><a href="#">1</a></li>
+                <li  class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+    <div class="container">
+        <ul class="menu">
+            <li class="on">HOME</li>
+            <li>PROFILE</li>
+            <li>ABOUT</li>
+            </ul>
+    </div>
+
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row1">
+                <div class="content1">This is Content 1</div>
+                <div class="content2">MaybeContent 2</div>
+                <div class="content3">Content 3</div>
+            </div>
+            <div class="row2">
+                <div class="content4">Content 4</div>
+                <div class="content5">Content 5</div>
+                <div class="content6">Content 6</div>
+                <div class="content7">Content 7</div>
+            </div>
+            <div class="row3">
+                <div class="content8">Content 8</div>
+                <div class="content9">Content 9</div>
+                <div class="content10">Content 10</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+                <h3>© 2018 ife.baidu.com</h3>
+        </div>
+    </div>
+</body>
+</html>

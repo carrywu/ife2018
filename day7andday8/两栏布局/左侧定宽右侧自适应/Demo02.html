@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        position: relative;
+    }
+    .left{
+        width: 150px;
+        height: 1800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: blue;
+    }
+    .right{
+        position: absolute;
+        top: 0;
+        left: 150px;
+        right: 0;
+        height: 1800px;
+        background-color: red;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左侧定宽</div>
+        <div class="right">右侧自适应</div>
+    </div>
+    
+</body>
+</html>
