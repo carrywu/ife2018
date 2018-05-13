@@ -201,6 +201,7 @@
 .bottom{
         width: 100%;
 }
+
 .feature14 .top {
         margin: 200px 0 100px 100px;
         padding-right: 20%;
@@ -214,7 +215,7 @@
         float: right;
 }
 .feature14 .bottom .news2{
-        padding-left: 8%;
+        padding-left: 18%;
         float: left;
         width: 50%;
 }
@@ -226,7 +227,7 @@
         height: 250px;
         width: 376px;
         float: right;
-        margin-right: 200px;
+        margin-right: 250px;
 }
 .team4{
         height: 1000px;
