@@ -13,20 +13,36 @@
     <button id="divide-btn">除</button>
     <p id="result">运算结果</p>
     <script>
-        var firstn=document.getElementById("first-number").value;
-        var secondn=document.getElementById("second-number").value;
-        var result=document.getElementById("result");
-        var add=document.getElementById("add-btn");
-        var minus=document.getElementById("minus-btn");
-        var times=document.getElementById("times-btn");
-        var divide=document.getElementById("divide-btn");
+
+
+        var result;
+        var first=document.getElementById('first-number');
+        var second=document.getElementById('second-number');
+        var resultp=document.getElementById('result');
+        var add=document.getElementById('add-btn');
+        var minus=document.getElementById('minus-btn');
+        var times=document.getElementById('times-btn');
+        var divide=document.getElementById('divide-btn');
         add.onclick=function(){
-            result=firstn+secondn;
-            return result.innerHTML="运算结果+result";
+            result=parseInt(first.value)+parseInt(second.value);
+            resultp.innerHTML=result;
         }
-        minus.onclick=function(){
-            result
+        minus.onclick=function() {
+            result=parseInt(first.value)-parseInt(second.value);
+            resultp.innerHTML=result;
         }
+        times.onclick=function(){
+            result=parseInt(first.value)*parseInt(second.value);
+            resultp.innerHTML=result;
+        }
+        divide.onclick=function(){
+            result=parseInt(first.value)/parseInt(second.value);
+            resultp.innerHTML=result;
+        }
+
+      
+    
+        
     </script>
 </body>
 </html>
