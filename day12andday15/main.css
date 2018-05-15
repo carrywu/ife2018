@@ -1,0 +1,440 @@
+*{
+    box-sizing: border-box; 
+
+}
+body,html{
+    padding: 0;
+    margin: 0;
+    height:100%;
+}
+
+
+.mainbox{
+    overflow:hidden;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.mainbox .menu {
+    font-size: 16px;
+}
+.mainbox .menu{
+    display: flex;
+    width: 350px;
+    height: 100%;   
+}
+.mainbox .menu .primary{
+    width: 98px;
+    background-color: #1D2531;
+}
+.mainbox .menu .primary img:nth-of-type(1){
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+.mainbox .menu .primary img:nth-of-type(2){
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+.mainbox .menu .primary img:nth-of-type(3){
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+.mainbox .menu .primary img:nth-of-type(4){
+    position: absolute;
+    top: 230px;
+    left: 20px;
+}
+.mainbox .menu .primary img:nth-of-type(5){
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+}
+.mainbox .menu .primary img:nth-of-type(6){
+    position: absolute;
+    bottom: 10px;
+    left: 55px;
+}
+.mainbox .menu .secondary{
+    position: relative;
+    flex: 1;
+    background-color: #222C3C;
+    
+}
+.mainbox .menu  hr{
+    width: 80%;
+    height: 1px;
+    background-color: rgb(160, 156, 156);
+    border: none;
+
+}
+.mainbox .menu .secondary .part1,
+.mainbox .menu .secondary .part2,
+.mainbox .menu .secondary .part3{
+    width: 100%;
+    padding: 25px 30px 0 30px;
+
+}
+.mainbox .menu .secondary .part1 .title{
+    overflow: hidden;
+}
+.menu-title span{
+    color: rgba(87, 99, 117, .5);
+    float: left;
+    font-size: 13PX;
+}
+.menu-title img{
+    float: right;
+}
+.submenu ul{
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.submenu ul li{
+    margin: 10px;
+    color: rgba(160, 156, 156,.9);
+    list-style: none;
+} 
+.submenu ul li img{
+    float: right;
+} 
+.menu-product ul{
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.menu-product ul li{
+    margin: 10px;
+    color: rgba(160, 156, 156,.9);
+    list-style: none;
+}
+.part3 .submenu ul li:hover
+{
+    color: #fff;
+}
+.capacity{
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    bottom: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+.capacity .sever{
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+}
+.capacity .fill{
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+}
+.chat{
+    flex: 1;
+    height: 100%;
+}
+.chat .header{
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+    border-bottom: 1px solid #E6E9EC;
+}
+.chat .header .face,
+.chat .header .face .name,
+.chat .header .dropdown{
+    float: right;
+}
+.chat .header .face img{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+}
+.chat .header .face .name{
+    color: rgb(35, 153, 241);
+    position: absolute;
+    top: 15px;
+    right: 70px;
+    font-size: 18px;
+}
+.chat .header .face .status{
+    color: #c9c9c9;
+    position: absolute;
+    bottom: 15px;
+    right: 43px;
+}
+.chat .header .dropdown{
+    position: absolute;
+    bottom: 20px;
+    right:0;
+}
+.chat .header .messages{
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    font-size: 20px;
+}
+.chat .chat-content{
+    display: flex;
+    height: 100%;
+}
+.chat .chat-content .left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+}
+.chat .chat-content .search{
+    padding: 15px 20px 15px 20px;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #c9c9c9;
+}
+.chat .chat-content .search input{
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    background-image: url(img/Search.png);
+    background-repeat: no-repeat;
+    background-size: 23px;
+    background-position: right;
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+}
+.chat .chat-content .left .chat1,
+.chat .chat-content .left .chat2{
+    border: 1px solid #c9c9c9;
+    height: 17%;
+    overflow: hidden;
+
+}
+.chat .chat-content .left .chat1:hover,
+.chat .chat-content .left .chat2:hover{
+    background-image: url(img/highlight.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.chat .chat-content .left .avatar{
+    position: relative;
+    padding: 10px;
+    
+}
+
+.chat .chat-content .left .avatar  .name  img:nth-of-type(1){
+    position: absolute;
+    top: 18px;
+    left: 75px;
+}
+.chat .chat-content .left .avatar  .name  img:nth-of-type(2){
+    position: absolute;
+    top: 70px;
+    right: 15px;
+}
+
+.chat .chat-content .left .avatar  .name span:nth-of-type(2){
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    color: #c9c9c9;
+}
+.chat .chat-content .left .avatar  .name span:nth-of-type(1){
+    position: absolute;
+    top: 10px;
+    left: 85px;
+    color: #299df5
+}
+.chat .chat-content .left .chat2 .avatar  .name span:nth-of-type(1){
+    position: absolute;
+    top: 10px;
+    left: 75px;
+    color: #585d68;
+}
+.chat .chat-content .left .avatar  .name span:nth-of-type(3){
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #bbc3ce;
+}
+.chat .chat-content .right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;    
+}
+.chat .chat-content .right .navbar{
+    width: 100%;
+    height: 70px;
+    border: 1px solid #c9c9c9;
+    position: relative;
+}
+.chat .chat-content .right .navbar .user{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    color: #585d68;
+}
+.chat .chat-content .right .tools{
+    position: absolute;
+    top: 15px;
+    right: 160px;
+}
+.chat .chat-content .right .arrows{
+    display: inline;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.chat .chat-content .right .arrows p {
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    right: 80px;
+}
+.chat .chat-content .right .message1,
+.chat .chat-content .right .message2
+{
+    border: 1px solid #c9c9c9;
+    height: 25%;
+    width: 100%;
+    padding: 10px 10px 10px 15px;
+    position: relative;
+}
+.chat .chat-content .right .message1 .chatava1 .username ,
+.chat .chat-content .right .message2 .chatava1 .username,
+.chat .chat-content .right .message3 .chatava1 .username{
+    position: absolute;
+    top: 15px;
+    left: 65px;
+}
+.chat .chat-content .right .message1 .chatava1 .time,
+.chat .chat-content .right .message2 .chatava1 .time{
+    position: absolute;
+    top: 20px;
+    left: 170px;
+    font-size: 11px;
+    color: #909eb0;
+}
+
+.chat .chat-content .right .message1 .chatava1 p,
+.chat .chat-content .right .message2 .chatava1 p{
+    position: absolute;
+    top: 40px;
+    left: 65px;
+    margin: 0;
+    font-size: 12px;
+    color: #585d68;
+}
+.chat .chat-content .right .message1 .chatava2 .username,
+.chat .chat-content .right .message2 .chatava2 .username  {
+    position: absolute;
+    top: 95px;
+    left: 65px;
+}
+.chat .chat-content .right .message1 .chatava2 .time,
+.chat .chat-content .right .message2 .chatava2 .time{
+    position: absolute;
+    top: 100px;
+    left: 170px;
+    font-size: 11px;
+    color: #909eb0;
+}
+.chat .chat-content .right .message1 .chatava2 .username,
+.chat .chat-content .right .message2 .chatava2 .username{
+    display: table-cell;
+    position: absolute;
+    top: 85px;
+    left: 5px;
+    height: 100%;
+}
+.chat .chat-content .right .message1 .chatava2 .username img,
+.chat .chat-content .right .message2 .chatava2 .username img{
+    vertical-align: middle;
+}
+
+.chat .chat-content .right .message1 .chatava2 p,
+.chat .chat-content .right .message2 .chatava2 p{
+    position: absolute;
+    top: 120px;
+    left: 65px;
+    margin: 0;
+    font-size: 12px;
+    color: #585d68;
+}
+.chat .chat-content .right .message2{
+    position: relative;
+    height: 38%;
+    border: 1px solid #c9c9c9;
+}
+.chat .chat-content .right .message2 > span{
+    position: absolute;
+    top: -12px;
+    left: 45%;
+    background-color: #fff;
+    color: #c9c9c9;
+}
+.chat .chat-content .right .message2 .photos{
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+.chat .chat-content .right .message3{
+    position: relative;
+    border-top:1px solid #299df5;
+    height: 16%;
+}
+.chat .chat-content .right .message3 >span{
+    position: absolute;
+    top: -12px;
+    left: 45%;
+    background-color: #fff;
+    color: #299df5;
+}
+.chat .chat-content .right .message3 .chatava1 img{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.chat .chat-content .right .message3 .chatava1 span{
+    position: absolute;
+    top: 10px;
+    left: 55px;
+}
+.chat .chat-content .right .message3 .chatava1 .time{
+    top: 10px;
+}
+.chat .chat-content .right .message3 .chatava1 p{
+    margin: 0;
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    font-size: 12px;
+    color: #585d68;
+}
+.chat .chat-content .right .message3 .chatava1 .time{
+    top: 20px;
+    left: 170px;
+    font-size: 11px;
+    color: #909eb0;
+}
+.chat .chat-content .right .message3  input{
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 80%; 
+    padding-left: 25px;
+    background-image: url(img/file.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+}
+
+
+
