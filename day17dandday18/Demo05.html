@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">  
+        table{  
+            width:600px;  
+
+            }  
+        table th{  
+            border:#c9c9c9 1px solid  
+            }  
+        </style>
+</head>
+<body>
+    <h1>按f12查看控制台</h1>
+
+
+    <script>
+    var n=0,m=0,t=0;
+    var jiu=document.getElementById("jiu");
+    document.write("<table>");
+    for(n=1;n<=9;n++){
+        var s=" ";
+        document.write("<tr>");
+        for(m=1;m<=n;m++){
+            t=m*n;
+            s=s+n+"*"+m+"="+t+" ";
+            document.write("<th>"+n+"*"+m+"="+t+"<th>");
+        }
+        console.log(s);
+        document.write("</tr>");
+
+    }
+    document.write("</table>");
+    
+
+     
+    </script>
+</body>
+</html>
