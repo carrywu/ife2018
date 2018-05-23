@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	.container{
+		overflow: hidden;
+	
+	}
+	.img{
+		margin: 0 auto;
+		width: 480px;
+		height: 480px;
+		background-image: url(img/erik_ce204002.jpg);
+		background-repeat: no-repeat;
+		background-position-x: 0;
+		background-position-y: -480px;
+	}
+
+	</style>
+</head>
+<body>
+	
+		<div class="img"></div>
+
+	<script>
+	window.onload=function anti(){
+		var num=480;
+	var st=setInterval(function(){
+			
+			
+			num=num+480;
+			if(num>7160){
+				num=480;
+			}		
+			document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
+			console.log(num);	
+			if(num==7160){
+				
+				clearInterval(st);
+			}
+		},150);
+	}
+	
+	</script>
+</body>
+</html>
