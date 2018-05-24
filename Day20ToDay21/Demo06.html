@@ -17,7 +17,7 @@
 		background-image: url(img/erik_ce204002.jpg);
 		background-repeat: no-repeat;
 		background-position-x: 0;
-		background-position-y: -480px;
+		background-position-y: 0px;
 	}
 	</style>
 </head>
@@ -26,42 +26,29 @@
 		<div class="img"></div>
 
 	<script>
-	window.onload=function anti(){
-		var num=480;
-	var st=setInterval(function()
-	{
-			
-			
 
-			num+=480;
-			
-			if(num==7680){
-			var si=setInterval(function(){
-				num=num-480;
-				var y=document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
-				if(num<=0){
-					console.log('in');
-					
-					setInterval(function(){
-						num+=480;
-						document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
-						if(num==7680){
-							
-						}
-					},150);
+		var img=document.getElementsByClassName('img')[0];
+		var y=0;
+		var flag=0;
+		function go(){
+			if(flag == 0){
+				y-=480;
+				if(y == -480*16){
+					flag = 1;
 				}
-				
-			},150);
-				clearTimeout(st);
-			}	
-			document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
-			
-			
-			
+			} else{
+				y +=480;
+				if(y==0){
+					flag=0;
+				}
+			}
+			var  result=y+'px';
+			console.log(result);
+			img.style.backgroundPositionY=result;
+			setTimeout(go,100);
+		}
 		
-		},100);
-	}
-	
+		go();
 	
 	</script>
 </body>
