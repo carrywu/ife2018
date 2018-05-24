@@ -19,7 +19,6 @@
 		background-position-x: 0;
 		background-position-y: -480px;
 	}
-
 	</style>
 </head>
 <body>
@@ -29,22 +28,41 @@
 	<script>
 	window.onload=function anti(){
 		var num=480;
-	var st=setInterval(function(){
+	var st=setInterval(function()
+	{
 			
 			
-			num=num+480;
-			if(num>7160){
-				num=480;
-			}		
-			document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
-			console.log(num);	
-			if(num==7160){
+
+			num+=480;
+			
+			if(num==7680){
+			var si=setInterval(function(){
+				num=num-480;
+				var y=document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
+				if(num<=0){
+					console.log('in');
+					
+					setInterval(function(){
+						num+=480;
+						document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
+						if(num==7680){
+							
+						}
+					},150);
+				}
 				
-				clearInterval(st);
-			}
-		},150);
+			},150);
+				clearTimeout(st);
+			}	
+			document.getElementsByClassName('img')[0].style.backgroundPositionY='-'+num+'px';
+			
+			
+			
+		
+		},100);
 	}
+	
 	
 	</script>
 </body>
-</html>
+</html>	

@@ -16,57 +16,38 @@
     <script>   
         var obj=document.querySelector('#fade-obj');
         var btn=document.querySelector('#fade-btn');
-        var flag=true;
-        var numb=0;
-        btn.onclick=function(){
-         
-           btn.disabled=true;
-            var num=10;
-            if(flag){
-                
-                var st=setInterval(function(){
-                   
-                    num--;
-                    obj.style.opacity=num/10;
-                  
-                    if(num<0){
-                        clearInterval(st);
-                        btn.innerHTML='淡入';
-                        flag = false;
-                        btn.disabled=false;    
-                        
-                      
-                    }
-                },100);
-            }else if(num==10){
-                
-                console.log(num);
-               var sr=function(){
-            
-                var num=0;
-                
-                    console.log('in2');
-                
-                btn.disabled=true;
-                    var st=setInterval(function(){
-                        num++;
-                        obj.style.opacity=num/10;
-                        if(num>=10){
-                            clearInterval(st);
-                            btn.innerHTML='淡出';
-                            btn.disabled=false;    
-                           
-                        }
-                    },100);       
+        btn.addEventListener('click',function(){
+            btn.disabled = true;
+            Animation();
+        });
+      function Animation(){
+          if(btn.innerText == '淡出'){
+              obj.style.opacity=1;
+              Fadein = setInterval(fadein,20);
+          }else{
+              Fadeout = setInterval(fadeout,20); 
+          }
+      }
+      function fadein(){
+          var inopacity = obj.style.opacity;
+          if(inopacity == 0){
+              clearInterval(Fadein);
+              btn.innerText = '淡入';
+              btn.disabled = false;
+          }else{
+              obj.style.opacity = (inopacity*100-1)/100;
+          }
+      }
+      function fadeout(){
+            var outopacity = obj.style.opacity;
+            if(outopacity==1){
+                clearTimeout('fadeout');
+                btn.innerText='淡出';
+                btn.disabled = false;
+            }else {
+                obj.style.opacity=(outopacity*100+1)/100
             }
-            sr();
-            }else{
-                st();
-            }                 
-        }
-     
-      
-        
+      }
         
         
     </script>
