@@ -65,42 +65,115 @@
         }
     }
 }
-var namebtn =document.getElementById('namebtn');
-var nametext =document.getElementById('nametxt').value;
+
 // 假设id和name均不会重复，根据输入name找到对应的id
- function findIdByName(name) {
-    switch (nametext) {
-        case 0:
-          for(var name in tree){
-               console.log(id);
-          }
-          break;
-          case 1:
-         
-           break;
-         
-     }
- 
-}
-namebtn.onclick=findIdByName();
+
+function findIdByName(name) {
+			var bt = tree;
+			var s = new Array();
+			<!-- console.log(bt.left.name); -->
+			var sea_name = name;
+			while(bt||s.length !=0) {
+				if(bt) {
+					s.push(bt);
+					bt = bt.left;
+				} else {
+					bt=s.pop();
+					if(bt.name == sea_name) {
+						return bt.id;
+					}
+					bt = bt.right;
+				}
+			}
+			return "未找到名字！";
+		}
+ console.log("测试NAME"+"Kai"+''+findIdByName("Kai"));
 
 // 假设id和name均不会重复，根据输入id找到对应的name
 function findNameById(id) {
+    var bt = tree;
+    var s  = new Array();
+    var sea_id = id;
+    while(bt||s.length!=0){
+        if(bt){
+            s.push(bt);
+            bt = bt.left;
+        }else {
+            bt=s.pop();
+            if(bt.id==sea_id){
+                return bt.name;
+            }
+            bt = bt.right;
+        }
 
+    }
+    return '不存在ID';
 }
+console.log('测试ID1'+ ' '+findNameById(1));
 
 // 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
 function getListWithDLR() {
-
+        var bt=tree;
+        var s=new Array();
+        var result="";
+        while(bt||s.length!=0){
+            if(bt){
+                result += (bt.name+' ');
+                s.push(bt);
+                bt = bt.left;
+            }else {
+                bt = s.pop();
+                bt = bt.right;
+            }
+        }
+        console.log(result);
 }
 
 // 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
 function getListWithLDR() {
+        var bt = tree;
+        var s = new Array();
+        var result = '';
+        while(bt||s.length!=0){
+            if(bt){
+                s.push(bt);
+                bt = bt.left;
+            }else{
+                bt=s.pop();
+                result +=(bt.name+' ');
+                bt.bt.right;
+            }
 
+        }
+        console.log(result);
 }
 
 // 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
 function getListWithLRD() {
+    var bt = tree;
+    var s  = new Array();
+    var r = null;
+    var result= '';
+    while(bt||s.length!=0){
+        if(bt){
+            s.push(bt);
+            bt = bt.left;
+        }else {
+                bt = s[s.length-1];
+                if(bt.right&&bt.right!=r){
+                    bt = bt.right;
+                    s.push(bt);
+                    bt = bt.left;
+                }else {
+                    bt = s.pop();
+                    result += (bt.name+' ');
+                    r = bt;
+                    bt=null;
+                }
+            }
+            console.log(result);
+
+    }
 
 }</script>
 </body>
