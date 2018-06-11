@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <p id="time"></p>
+</head>
+<body>
+    <script>
+    function getToday(thisday){
+    var arr=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    return arr[thisday];
+    } 
+    function checkTime(i){
+        if (i<10){
+            i = '0'+i;
+        }
+        return i;
+    }
+    function getDate(){
+        var today = new Date();
+        var year  = today.getFullYear();
+        var mon   = today.getMonth();
+        var day   = today.getDate();
+        var hour  = today.getHours();
+        var minus = today.getMinutes();
+        var second = today.getSeconds();
+        var hour =checkTime(hour);
+        var minus  = checkTime(minus);
+        var second = checkTime(second);
+        var thisday = today.getDay();
+        var thisday = getToday(thisday);
+        var time =document.getElementById('time');
+        s = setTimeout('getDate()',1000);
+        time.innerHTML = year+"-"+mon+"-"+day+" "+thisday+" "+hour+":"+minus+":"+second;
+    }
+    getDate();
+    
+
+    
+    </script>
+</body>
+</html>

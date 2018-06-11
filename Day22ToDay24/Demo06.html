@@ -25,23 +25,23 @@ var cont     = document.getElementById('queue-cont');
 var input    = document.getElementById('queue-input');
 inbtn.onclick = function () {
   queue.push(input.value);
-  cont.innerHTML='队列内容：'+ queue.join('->');
+  cont.innerHTML='栈内容：'+ queue.join('->');
 }
 
 outbtn.onclick=function(){
         queue.pop();
-        cont.innerHTML='队列内容：'+ queue.join('->');
+        cont.innerHTML='栈内容：'+ queue.join('->');
 }
 
 fontbtn.onclick=function(){
-    cont.innerHTML='队列头内容：'+ queue[0];
+    cont.innerHTML='栈头内容：'+ queue[0];
 }
 
 emptybtn.onclick=function(){
     if(queue.length<=0){
-        cont.innerHTML='队列为空';
+        cont.innerHTML='栈为空';
     }else{
-        cont.innerHTML='队列不为空' 
+        cont.innerHTML='栈不为空' 
     }
   
 }
